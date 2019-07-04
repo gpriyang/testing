@@ -1,0 +1,23 @@
+version: 2
+jobs:
+  test:
+    docker:
+      # the Docker image with Cypress dependencies
+      - image: circleci/python:2.7.14
+    parallelism: 1
+    steps:
+      - checkout
+      - setup_remote_docker
+
+      - run:
+          name: Install and login AWS configuration
+          command: |
+             sudo pip install awscli
+             eval $(aws ecr get-login --no-include-email --region ap-south-1)
+               
+workflows:
+  version: 2
+  test:
+      jobs:
+          - test:
+              context: colliectl
