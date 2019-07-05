@@ -15,8 +15,6 @@ jobs:
              sudo pip install awscli
              python env_var.py
              cat env_var.txt
-             docker create -v /root/.docker/ --name configs ubuntu
-             docker cp env_var.txt configs:env_var.txt
                
 workflows:
   version: 2
