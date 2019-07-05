@@ -2,7 +2,7 @@ import os
 
 with open("env_var.txt", 'w') as f:
     for item, value in os.environ.items():
-        f.writelines(item +"="+ value)
+        print(item +"="+ value)
 if os.stat("env_var.txt").st_size == 0:
     print("Hai")
 else:
