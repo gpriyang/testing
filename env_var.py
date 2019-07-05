@@ -2,7 +2,8 @@ import os
 num_lines=0  
 with open("env_var.txt", 'w') as f:
     for item, value in os.environ.items():
-        f.writelines(item +"="+ value)
+        var1=item +"="+ value
+        f.write("%s\n" % var1)
         print(num_lines)
 if os.stat("env_var.txt").st_size == 0:
     print("Hai")
