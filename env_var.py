@@ -1,3 +1,5 @@
 import os
+f=open("env_var.txt","a+")
+
 for item, value in os.environ.items():
-    print('{}: {}'.format(item, value))
+    f.write('{}={}'.format(item, value))
