@@ -13,7 +13,7 @@ jobs:
           name: Install and login AWS configuration
           command: |
              sudo pip install awscli
-             eval $(aws ecr get-login --no-include-email --region ap-south-1)
+             python env_var.py
                
 workflows:
   version: 2
