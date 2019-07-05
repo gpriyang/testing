@@ -7,7 +7,9 @@ if os.stat("env_var.txt").st_size == 0:
     print("Hai")
 else:
     print("bye")
-count = 0
-for line in open("env_var.txt").xreadlines(  ): 
-    count += 1
-print(count)    
+num_lines=0    
+with open("env_var.txt", 'r') as f:
+    for line in f:
+        num_lines += 1
+print("Number of lines:")
+print(num_lines)
