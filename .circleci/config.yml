@@ -1,4 +1,4 @@
-big ole_test:
+big_ole_test:
     <<: *defaults
     machine:
         enabled: true
