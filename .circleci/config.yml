@@ -9,12 +9,6 @@ jobs:
       - checkout
       - setup_remote_docker
 
-      - run:
-          name: Install and login AWS configuration
-          command: |
-             sudo pip install awscli
-             python env_var.py
-             cat env_var.txt
                
 workflows:
   version: 2
