@@ -15,5 +15,5 @@ jobs:
             - run:
                 name: Start the world
                 command: |
-                      ls $PWD
+                      sudo ls $PWD
                       ./bin/big_ole_test
