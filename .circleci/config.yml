@@ -16,5 +16,8 @@ jobs:
             - run:
                 name: Start the world
                 command: |
+                      pip install --upgrade pip wheel
+                      pip install bzt
+                      pip install --upgrade bzt
                       chmod +x bin/big_ole_test.sh
                       bin/big_ole_test.sh
