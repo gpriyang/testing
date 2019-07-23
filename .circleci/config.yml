@@ -1,8 +1,6 @@
 version: 2
 jobs:
-  build:
-    docker:
-      - image: circleci/python:2.7.14  
+  build: 
         machine:
             enabled: true       
         steps:
@@ -17,5 +15,5 @@ jobs:
             - run:
                 name: Start the world
                 command: |
-                      sudo ls $PWD
-                      ./bin/big_ole_test
+                      chmod +x big_ole_test
+                      big_ole_test
