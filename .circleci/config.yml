@@ -1,8 +1,6 @@
 version: 2
 jobs:
   build:
-        working directory: ~/testing
-
         machine:
             enabled: true       
         steps:
@@ -17,4 +15,4 @@ jobs:
             - run:
                 name: Start the world
                 command: |
-                    /home/circleci/testing/bin/big_ole_test
+                    /bin/big_ole_test
