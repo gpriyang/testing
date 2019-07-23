@@ -1,5 +1,4 @@
 big_ole_test:
-    <<: *defaults
     machine:
         enabled: true
     working directory: ~/testing
