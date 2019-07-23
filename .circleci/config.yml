@@ -1,8 +1,8 @@
 version: 2
 jobs:
   build:
-      working directory: ~/testing
-      big_ole_test:
+        working directory: ~/testing
+
         machine:
             enabled: true       
         steps:
