@@ -1,10 +1,10 @@
 version: 2
 jobs:
   build:
+      working directory: ~/testing
       big_ole_test:
         machine:
-            enabled: true
-        working directory: ~/testing
+            enabled: true       
         steps:
             - attach_workspace:
                 at: ~/
