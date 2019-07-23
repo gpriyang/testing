@@ -17,5 +17,24 @@ scenarios:
         fromPort: paris
         toPort: Buenos Aires
         
+reporting:
+- module: passfail
+  criteria:
+  - avg-rt>200ms, stop as failed
+  - failures>0%, stop as failed
+- module: blazemeter
 
+modules:
+  blazemeter:
+    address: https://a.blazemeter.com
+    data-address: https://data.blazemeter.com
+    browser-open: none
+    send-interval: 30s
+    report-times-multiplier: 1000
+    timeout: 5s
+    artifact-upload-size-limit: 5
+    public-report: false
+    report-name: CircleCI Build 1
+    test: testing OAUTH E2E Perf Test (CircleCI)
+    project: CommonIdentityService
     
