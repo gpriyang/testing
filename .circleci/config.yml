@@ -14,3 +14,6 @@ jobs:
             - run:
                 name: Install postgres client
                 command: sudo apt-get update && sudo apt-get install -y postgresql-client
+            - run:
+                name: Start the world
+                command: ./bin/big_ole_test
