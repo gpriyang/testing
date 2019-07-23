@@ -1,0 +1,40 @@
+execution:
+- concurrency: 30
+  ramp-up: 1m
+  hold-for: 5m
+  scenario: quick-test
+
+
+scenarios:
+  quick-test:
+    requests:
+    - http://blazedemo.com
+    - url: http://blazedemo.com/reserve.php
+      method: POST
+      headers:
+        Content-Type: application/x-www-form-urlencoded
+      body:
+        fromPort: paris
+        toPort: Buenos Aires
+        
+reporting:
+- module: passfail
+  criteria:
+  - avg-rt>200ms, stop as failed
+  - failures>0%, stop as failed
+- module: blazemeter
+
+modules:
+  blazemeter:
+    address: https://a.blazemeter.com
+    data-address: https://data.blazemeter.com
+    browser-open: none
+    send-interval: 30s
+    report-times-multiplier: 1000
+    timeout: 5s
+    artifact-upload-size-limit: 5
+    public-report: false
+    report-name: CircleCI Build 1
+    test: testing OAUTH E2E Perf Test (CircleCI)
+    project: CommonIdentityService
+    
