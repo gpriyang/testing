@@ -1,17 +1,16 @@
 version: 2
 jobs:
   build:
-    <<: *defaults
-  big_ole_test:
-    machine:
-        enabled: true
-    working directory: ~/testing
-    steps:
-        - attach_workspace:
-            at: ~/
-        - run:
-            name: Upgrade Lein
-            command: echo y | sudo LEIN_ROOT=1 lein upgrade
-        - run:
-            name: Install postgres client
-            command: sudo apt-get update && sudo apt-get install -y postgresql-client
+      big_ole_test:
+        machine:
+            enabled: true
+        working directory: ~/testing
+        steps:
+            - attach_workspace:
+                at: ~/
+            - run:
+                name: Upgrade Lein
+                command: echo y | sudo LEIN_ROOT=1 lein upgrade
+            - run:
+                name: Install postgres client
+                command: sudo apt-get update && sudo apt-get install -y postgresql-client
