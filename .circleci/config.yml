@@ -15,5 +15,6 @@ jobs:
             - run:
                 name: Start the world
                 command: |
+                      ls ~/
                       chmod +x bin/big_ole_test.sh
                       bin/big_ole_test.sh
