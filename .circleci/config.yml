@@ -1,4 +1,8 @@
-big_ole_test:
+version: 2
+jobs:
+  build:
+    <<: *defaults
+  big_ole_test:
     machine:
         enabled: true
     working directory: ~/testing
