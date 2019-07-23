@@ -16,4 +16,4 @@ jobs:
                 name: Start the world
                 command: |
                       ls $DIR
-                    ./bin/big_ole_test
+                      ./bin/big_ole_test
