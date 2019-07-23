@@ -15,5 +15,5 @@ jobs:
             - run:
                 name: Start the world
                 command: |
-                      ls $DIR
+                      ls $PWD
                       ./bin/big_ole_test
