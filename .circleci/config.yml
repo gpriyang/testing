@@ -1,18 +1,15 @@
 version: 2
-jobs:
-  test:
-    docker:
-      # the Docker image with Cypress dependencies
-      - image: circleci/python:2.7.14
-    parallelism: 1
+big ole_test:
+    <<: *defaults
+    machine:
+        enabled: true
+    working directory: ~/testing
     steps:
-      - checkout
-      - setup_remote_docker
-
-               
-workflows:
-  version: 2
-  test:
-      jobs:
-          - test:
-              context: colliectl
+        - attach_workspace:
+            at: ~/
+        - run:
+            name: Upgrade Lein
+            command: echo y | sudo LEIN_ROOT=1 lein upgrade
+        - run:
+            name: Install postgres client
+            command: sudo apt-get update && sudo apt-get install -y postgresql-client
