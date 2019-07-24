@@ -9,7 +9,7 @@ execution:
 scenarios:
   quick-test:
     requests:
-   - http://blazedemo.com/
+    - http://blazedemo.com/
   blazedemo:
     default-address: blazedemo.com
     headers:
