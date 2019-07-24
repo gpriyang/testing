@@ -38,12 +38,12 @@ scenarios:
         not: false
 
         
-#reporting:
+reporting:
 #- module: passfail
 #  criteria:
 #  - avg-rt>200ms, stop as failed
 #  - failures>0%, stop as failed
-#- module: blazemeter
+- module: blazemeter
 
 modules:
   blazemeter:
