@@ -1,8 +1,7 @@
 execution:
 - concurrency: 30
-  iterations: 10
+  iterations: 1
   ramp-up: 1m
-  hold-for: 5m
   scenario: quick-test
 
 
@@ -47,7 +46,7 @@ modules:
   blazemeter:
     address: https://a.blazemeter.com
     data-address: https://data.blazemeter.com
-    browser-open: none
+    browser-open: start
     send-interval: 30s
     report-times-multiplier: 1000
     timeout: 5s
