@@ -9,4 +9,4 @@ echo "Run the testing OAUTH BLAZEMETER TEST"
 
 pip install --upgrade pip wheel
 pip install bzt
-bzt blazemeter/testing_auth.yml -o modules.blazemeter.eport-name="CircleCI Build ${CIRCLE_BUILD_NUM}" -o modules.blazemeter.token=${BLAZZE_API_KEY}
+bzt blazemeter/testing_auth.yml -o modules.blazemeter.report-name="CircleCI Build ${CIRCLE_BUILD_NUM}" -o modules.blazemeter.token=${BLAZZE_API_KEY}
