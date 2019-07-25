@@ -8,12 +8,12 @@ jobs:
             - checkout:
             - attach_workspace:
                 at: ~/
-            - run:
-                name: Upgrade Lein
-                command: echo y | sudo LEIN_ROOT=1 lein upgrade
-            - run:
-                name: Install postgres client
-                command: sudo apt-get update && sudo apt-get install -y postgresql-client
+            #- run:
+            #    name: Upgrade Lein
+            #    command: echo y | sudo LEIN_ROOT=1 lein upgrade
+            #- run:
+            #    name: Install postgres client
+            #    command: sudo apt-get update && sudo apt-get install -y postgresql-client
             - run:
                 name: Start the world
                 command: |
