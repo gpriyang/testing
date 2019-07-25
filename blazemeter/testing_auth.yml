@@ -1,7 +1,7 @@
 ---
 execution:
-- concurrency: 300
-  iterations: 20
+- concurrency: 10
+  iterations: 10
   ramp-up: 5m
   steps: 5
   hold-for: 5m
