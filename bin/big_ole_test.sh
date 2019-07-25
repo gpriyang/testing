@@ -1,5 +1,4 @@
 #!/bin/bash
-set -x
 if [ -z $BOT_USER ] || [ -z $BOT_PASSWORD ] ; then
     echo "Missing BOT_USER or BOT_PASSWORD Environment variable"
     echo "Skiping Tests"
