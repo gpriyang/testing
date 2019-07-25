@@ -4,7 +4,7 @@ execution:
   iterations: 10
   ramp-up: 1m
   steps: 5
-  hold-for: 30s
+  hold-for: 10s
   scenario: quick-test
 
 
