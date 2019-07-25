@@ -2,7 +2,8 @@ version: 2
 jobs:
   build: 
         machine:
-            enabled: true       
+            enabled: true
+        parallelism: 4
         steps:
             - checkout:
             - attach_workspace:
@@ -18,6 +19,7 @@ jobs:
                 command: |
                       chmod +x bin/big_ole_test.sh
                       bash bin/big_ole_test.sh
+                no_output_timeout: 45m
                       
             - store_artifacts:
                  path: /home/circleci/project/
