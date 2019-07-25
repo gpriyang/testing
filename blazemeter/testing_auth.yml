@@ -1,10 +1,10 @@
 ---
 execution:
-- concurrency: 50
+- concurrency: 1000
   iterations: 20
-  ramp-up: 1m
+  ramp-up: 30m
   steps: 5
-  hold-for: 5m
+  hold-for: 2h
   scenario: quick-test
 
 
