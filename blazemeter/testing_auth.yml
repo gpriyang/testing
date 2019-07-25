@@ -1,6 +1,6 @@
 ---
 execution:
-- concurrency: 1000
+- concurrency: 100
   iterations: 20
   ramp-up: 30m
   steps: 5
