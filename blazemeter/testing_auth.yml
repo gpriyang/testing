@@ -6,6 +6,22 @@ execution:
   steps: 5
   hold-for: 10s
   scenario: quick-test
+  
+- concurrency: 100
+  ramp-up: 1m
+  hold-for: 5m
+  scenario: simple
+
+scenarios:
+  simple:
+    script: blazemeter/existing-BlazeDemo.jmx
+    properties:  
+      log_level.jmeter: DEBUG # add JMeter property
+    variables:
+      home_label_name: BlazeDemo.com
+    modifications:
+      disable:
+      - Constant Timer  
 
 
 scenarios:
