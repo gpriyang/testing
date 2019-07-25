@@ -5,6 +5,8 @@ execution:
   ramp-up: 5m
   steps: 5
   hold-for: 5m
+  locations:
+    us-east-1: 1
   scenario: quick-test
 
 
