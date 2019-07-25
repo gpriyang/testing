@@ -22,9 +22,6 @@ scenarios:
     modifications:
       disable:
       - Constant Timer  
-
-
-scenarios:
   quick-test:
     requests:
     - http://blazedemo.com/
