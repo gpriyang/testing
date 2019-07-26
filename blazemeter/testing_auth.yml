@@ -1,22 +1,20 @@
 ---
 execution:
 - concurrency: 100
-  iterations: 10
-  ramp-up: 10s
-  steps: 5
-  hold-for: 10s
+  ramp-up: 1m
+  hold-for: 5m
   scenario: simple
 
 scenarios:
   simple:
-    script: blazemeter/existing-BlazeDemo.jmx
+    script: existing-BlazeDemo.jmx
     properties:  
       log_level.jmeter: DEBUG # add JMeter property
     variables:
       home_label_name: BlazeDemo.com
     modifications:
       disable:
-      - Constant Timer  
+      - Constant Timer
 
 reporting:
 #- module: passfail
