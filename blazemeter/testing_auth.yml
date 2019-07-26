@@ -5,7 +5,6 @@ execution:
   ramp-up: 10s
   steps: 5
   hold-for: 10s
-  scenario: quick-test
   scenario: simple
 
 scenarios:
@@ -18,35 +17,7 @@ scenarios:
     modifications:
       disable:
       - Constant Timer  
-  quick-test:
-    requests:
-    - http://blazedemo.com/
-  blazedemo:
-    default-address: blazedemo.com
-    headers:
-      X-Tracking: false
-      Accept: "*/*"
-    requests:
-    - url: /
-      headers:
-        Accept: text/html
-      assert:
-      - contains:
-        - ".+sometext.+"
-        subject: body
-        regexp: true
-        not: true
-    - url: /reserve.php
-      method: POST
-      body: 'Some Body Data'
-      think-time: 2s
-      assert:
-      - contains:
-        - 200
-        subject: http-code
-        not: false
 
-        
 reporting:
 #- module: passfail
 #  criteria:
