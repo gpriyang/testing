@@ -20,7 +20,7 @@ reporting:
 - module: passfail
   criteria:
 #  - avg-rt>200ms, stop as failed
-   - succ\<100%
+   - succ<100%
 - module: blazemeter
 
 modules:
