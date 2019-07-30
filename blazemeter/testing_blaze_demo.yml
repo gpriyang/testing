@@ -62,10 +62,10 @@ scenarios:
           state: '2342'
           zipCode: '2321'
 reporting:
-#- module: passfail
-#  criteria:
+- module: passfail
+  criteria:
 #  - avg-rt>200ms, stop as failed
-#  - failures>0%, stop as failed
+  - succ>=100%, stop as failed
 - module: blazemeter
 
 modules:
